@@ -1,15 +1,11 @@
 export default function HeroSection() {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
+      <img
+        src="/hero-video.gif"
+        alt="Hero animation"
         className="absolute w-full h-full object-cover"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-        お使いのブラウザは動画タグをサポートしていません。
-      </video>
+      />
       <div className="relative z-10 text-center">
         <h1 className="text-5xl md:text-7xl font-bold mb-4 animate-pulse">
           原生生物の世界
@@ -27,4 +23,3 @@ export default function HeroSection() {
     </section>
   )
 }
-
