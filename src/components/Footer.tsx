@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 text-center">
         <p>&copy; 2024 Protophysica. All rights reserved.</p>
         <p className="mt-2 text-sm text-gray-400">
-          本作品は、未来のエネルギーを手のひらサイズで制作物にする可能性を提示します。
+          本作品は、小さくて軽くてすごいを作れる可能性を提示します。
         </p>
       </div>
     </footer>

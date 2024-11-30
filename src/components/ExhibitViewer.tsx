@@ -7,11 +7,11 @@ const exhibitData = {
   title: "Protophysica",
   description: "僕らが何かを制作する時、絵の具で色を付けたり、板を切り出したり、テープを貼り付けたりするように、スーパーキャパシタを制作物に取り付ける未来が考えられないだろうか。高速に充放電できるエネルギー貯蔵装置であるスーパーキャパシタ。小型で超軽量なところも素晴らしい。接触によるほんの一瞬の給電で溜め込んだエネルギーを制作物に取り付けることで、新たな制作の可能性が広がるだろう。",
   images: [
-    { id: 1, src: '/nozo.gif', title: '通常移動' },
-    { id: 2, src: '/nozo.gif', title: '捕食時の動き' },
-    { id: 3, src: '/nozo.gif', title: '分裂過程' },
-    { id: 4, src: '/nozo.gif', title: '刺激反応' },
-    { id: 5, src: '/nozo.gif', title: '休眠状態' },
+    { id: 0, src: '/00.jpeg', title: '東京大学制作展' },
+    { id: 1, src: '/01.gif', title: '東京大学制作展' },
+    { id: 2, src: '/02.gif', title: '東京大学制作展' },
+    { id: 3, src: '/03.gif', title: '東京大学制作展' },
+    { id: 4, src: '/04.gif', title: '東京大学制作展' },
   ]
 }
 
