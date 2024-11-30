@@ -28,12 +28,13 @@ export default function ExhibitViewer() {
     if (!mounted) return
 
     let timer: NodeJS.Timeout;
-    if (autoPlay) {
-      timer = setTimeout(() => {
-        const nextIndex = (exhibitData.images.findIndex(v => v.id === currentImage.id) + 1) % exhibitData.images.length;
-        setCurrentImage(exhibitData.images[nextIndex]);
-      }, 10000);
-    }
+    const currentIndex = exhibitData.images.findIndex(v => v.id === currentImage.id);
+    const nextIndex = (currentIndex + 1) % exhibitData.images.length;
+    const delays = [5000, 11000, 12000, 10000, 13000]; // Custom delays for each image
+    const delay = delays[currentIndex];
+    timer = setTimeout(() => {
+      setCurrentImage(exhibitData.images[nextIndex]);
+    }, delay);
     return () => clearTimeout(timer);
   }, [currentImage, autoPlay, mounted]);
 

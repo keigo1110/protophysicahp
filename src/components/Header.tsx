@@ -8,10 +8,8 @@ export default function Header() {
         <ul className="flex space-x-4">
           <li><Link href="#about" className="hover:text-green-400 transition-colors">概要</Link></li>
           <li><Link href="#exhibit" className="hover:text-green-400 transition-colors">展示</Link></li>
-          <li><Link href="#contact" className="hover:text-green-400 transition-colors">お問い合わせ</Link></li>
         </ul>
       </nav>
     </header>
   )
 }
-
