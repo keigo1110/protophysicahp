@@ -13,8 +13,25 @@ type Exhibition = {
   officialLink: string;
 };
 
+const shuffleArray = (array: string[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 const exhibitData = {
   title: "Protophysica",
+  team: {
+    name: "4ZIGEN",
+    members: shuffleArray([
+      "岡空来",
+      "金澤政宜",
+      "中田裕紀",
+      "南田桂吾"
+    ])
+  },
   description: "僕らが何かを制作する時、絵の具で色を付けたり、板を切り出したり、テープを貼り付けたりするように、スーパーキャパシタを制作物に取り付ける未来が考えられないだろうか。高速に充放電できるエネルギー貯蔵装置であるスーパーキャパシタ。小型で超軽量なところも素晴らしい。接触によるほんの一瞬の給電で溜め込んだエネルギーを制作物に取り付けることで、新たな制作の可能性が広がるだろう。",
   features: [
     "長寿命で繰り返し使える！",
@@ -73,7 +90,15 @@ export default function ExhibitViewer() {
     <>
       <section id="protophysica" className="py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-12 text-center">{exhibitData.title}</h1>
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold mb-4">{exhibitData.title}</h1>
+              <div className="text-gray-300">
+              <p className="font-medium mb-2">{exhibitData.team.name}</p>
+              <p className="text-sm">
+                {exhibitData.team.members.join(' / ')}
+              </p>
+            </div>
+          </div>
           <div className="flex flex-col lg:flex-row gap-8 mb-16">
             <div className="lg:w-2/3">
               <div className="relative aspect-video bg-gray-800 rounded-lg overflow-hidden">
