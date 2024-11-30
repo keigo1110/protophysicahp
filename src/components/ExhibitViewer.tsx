@@ -89,26 +89,30 @@ export default function ExhibitViewer() {
                 </div>
               </div>
               <div className="mt-4 flex justify-between items-center space-x-4">
-                <div className="flex space-x-2 overflow-x-auto pb-2">
+                <div className="flex space-x-2 overflow-x-auto pb-2 px-0.5 pt-0.5">
                   {exhibitData.images.map((image) => (
-                    <motion.button
+                    <motion.div
                       key={image.id}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`flex-shrink-0 w-24 h-16 bg-gray-800 rounded overflow-hidden ${
-                        currentImage.id === image.id ? 'ring-2 ring-green-400' : ''
-                      }`}
-                      onClick={() => {
-                        setCurrentImage(image);
-                        setAutoPlay(false);
-                      }}
+                      className="flex-shrink-0 p-0.5"
                     >
-                      <img
-                        src={image.src}
-                        alt={image.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </motion.button>
+                      <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className={`w-24 h-16 bg-gray-800 rounded overflow-hidden ${
+                          currentImage.id === image.id ? 'ring-2 ring-green-400' : ''
+                        }`}
+                        onClick={() => {
+                          setCurrentImage(image);
+                          setAutoPlay(false);
+                        }}
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </motion.button>
+                    </motion.div>
                   ))}
                 </div>
                 <button
